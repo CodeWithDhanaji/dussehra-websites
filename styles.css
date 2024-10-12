@@ -8,31 +8,42 @@
 /* Basic styles for body */
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #FFD700, #FF6347);
+    background-color: #ffebcd; /* Light background color */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    color: #fff;
+    color: #333; /* Dark text color for contrast */
 }
 
 /* Main container styling */
 .main-container {
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: #ffffff; /* White background for content */
     padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     max-width: 400px;
     width: 90%;
+    transition: transform 0.3s; /* Animation for scaling */
+}
+
+/* Scale effect on hover */
+.main-container:hover {
+    transform: scale(1.02);
 }
 
 /* Title styling */
 h1 {
     font-size: 2.5rem;
-    color: #FF4500;
+    color: #FF4500; /* Bright orange color */
     margin-bottom: 15px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: color 0.3s; /* Smooth color change on hover */
+}
+
+/* Change color on hover */
+h1:hover {
+    color: #FF6347; /* Darker orange */
 }
 
 /* Wish text styling */
@@ -42,7 +53,7 @@ h1 {
 }
 
 /* Symbol box for emojis */
-.symbol-box h2 {
+.symbol-box {
     font-size: 3rem;
     margin-bottom: 15px;
 }
@@ -50,12 +61,12 @@ h1 {
 /* Message styling */
 .message h2 {
     font-size: 1.8rem;
-    color: #FFD700;
+    color: #FF6347; /* Darker orange for contrast */
     margin-bottom: 10px;
 }
 
 .message p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-bottom: 20px;
 }
 
@@ -71,10 +82,11 @@ h1 {
     font-size: 1rem;
     text-decoration: none;
     border-radius: 30px;
-    transition: all 0.3s ease;
     color: #fff;
+    transition: background-color 0.3s, transform 0.3s; /* Animation for buttons */
 }
 
+/* Colors for social buttons */
 .facebook {
     background-color: #3b5998;
 }
@@ -87,8 +99,8 @@ h1 {
     background-color: #25d366;
 }
 
-/* Hover effects */
+/* Hover effects for buttons */
 .social-button:hover {
-    transform: scale(1.1);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px); /* Lift effect on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
